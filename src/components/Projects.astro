@@ -1,0 +1,58 @@
+---
+import SpringIcon from '../components/icons/Spring.astro';
+import ThymeleafIcon from '../components/icons/Thymeleaf.astro';
+import MySQLIcon from '../components/icons/MySQL.astro';
+
+const TAGS = {
+    SPRING: {
+        name: "Spring Boot",
+        class: "bg-green-600 text-white",
+        icon: SpringIcon,    
+},
+    MYSQL: {
+        name: "MySql",
+        class: "bg-blue-800 text-white",
+        icon: MySQLIcon,
+
+},
+    THYMELEAF: {
+        name: "Thymeleaf",
+        class: "bg-green-800 text-white",
+        icon: ThymeleafIcon,
+    }
+};        
+
+
+const PROJECTS = [
+    {
+        title: "Aura Artesanal",
+        description: "Aura Artesanal es un proyecto enfocado en la exhibición y comercialización de productos artesanales como lámparas, macetas y relojes. Fue creado con el propósito de llegar a más personas, optimizar el tiempo de venta y facilitar la presentación de los productos de manera visual, ordenada y atractiva. Su objetivo es ofrecer una experiencia moderna que conecte el trabajo artesanal con clientes que buscan piezas únicas y elaboradas con dedicación.",
+        link: " #",
+        github: "https://github.com/CamiloQuintero08/LamparasShoop",
+        image: "img/LamparasShop.webp",
+        tags: [TAGS.SPRING, TAGS.MYSQL, TAGS.THYMELEAF],
+    },  
+];    
+---
+
+{
+    PROJECTS.map(({ image, title, description, tags})=> (
+       <article>
+        <h3 class="text-2xl font-semibold text-lime-300 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-2">
+            {tags.map(tag => (
+                <li>
+                    <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}>
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                    </span>
+                </li>
+            ))}
+        </ul>
+        <img class="rounded shadow-xl shadow-emerald-900" 
+        src={image} 
+        alt={`Captura de pantalla del proyecto ${image}`} />
+       </article> 
+    ))
+}
