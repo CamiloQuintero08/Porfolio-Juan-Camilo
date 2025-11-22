@@ -1,7 +1,6 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
-import Welcome from '../components/Welcome.astro';
 import Badge from '../components/Badge.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import LinkedInIcon from '../components/icons/LinkedIn.astro';
@@ -10,8 +9,10 @@ import SocialPill from '../components/SocialPill.astro';
 import MailIcon from '../components/icons/Mail.astro';
 import CodeIcon from '../components/icons/Code.astro';
 import Projects from '../components/Projects.astro';
-import SobreMi from '../components/SobreMi.astro'
-import ProilePhoto from "../img/ProilePhoto.jpg";
+import SobreMi from '../components/SobreMi.astro';
+import UserIcon from '../components/icons/User.astro';
+import Contacto from '../components/Contacto.astro';
+import ContactIcon from '../components/icons/Contact.astro'
 
 ---
 
@@ -32,10 +33,11 @@ description="Portafolio de Juan Camilo, desarrollador web especializado en crear
 			 class="flex justify-center items-center">
 				<Badge>Disponible para trabajar</Badge></a>
 		</h1>
-		<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-			En busca de experiencia. <span class="text-blue-300 text-shadow-xs text-shadow-black">Desarrollador Web</span>. Del sur de colombia en el valle de aburra. Especializado 
-			en buscar soluciones a problemas reales con codigo limpio y eficiente.
+		<h2 class="text-xl lg:text-2xl max-w-[700px] text-pretty">
+  		En búsqueda de oportunidades. <span class="text-blue-300 text-shadow-xs text-shadow-black">Desarrollador Web</span> 
+		del sur de Colombia, ubicado en el Valle de Aburrá. Enfocado en crear soluciones prácticas con código claro, eficiente y orientado a resultados.
 		</h2>
+
 
 			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/milooo58/">
@@ -46,7 +48,7 @@ description="Portafolio de Juan Camilo, desarrollador web especializado en crear
 					<GitHubIcon class="size-4 md:size-6" />
 					GitHub
 				</SocialPill>	
-				<SocialPill href="mailto:Jcrestrepo810@gmail.com">
+				<SocialPill href=mailto: Jcrestrepo810@gmail.com>
 					<MailIcon class="size-4 md:size-6" />
 					Jcrestrepo810@gmail.com
 				</SocialPill>			
@@ -63,11 +65,19 @@ description="Portafolio de Juan Camilo, desarrollador web especializado en crear
 
 		<SectionContainer id="sobre-mi">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"> 
-			<CodeIcon class="size-7" />
+			<UserIcon class="size-7" />
 			Sobre mí
 			</h2>
 			<SobreMi />
 		</SectionContainer>	
+
+		<SectionContainer id="contacto">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"> 
+			<ContactIcon class="size-7" />
+			Mi Contacto
+			</h2>
+			<Contacto />
+		</SectionContainer>
 
 	</main>
 </Layout>	

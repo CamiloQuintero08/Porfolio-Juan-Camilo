@@ -1,0 +1,31 @@
+---
+import GitHubIcon from "./icons/GitHub.astro"
+import LinkedInIcon from "./icons/LinkedIn.astro"
+
+---
+<section class="w-full max-w-xl mx-auto p-6 bg-black/20 rounded-2xl shadow-lg shadow-white/40 transition-transform duration-300 hover:scale-105">
+  <div class="flex flex-col gap-4 text-white">
+    <p><span class="font-semibold text-lime-300">Nombre:</span> Juan Camilo Quintero Restrepo</p>
+    <p><span class="font-semibold text-lime-300">Correo:</span> Jcrestrepo810@gmail.com</p>
+    <p><span class="font-semibold text-lime-300">Teléfono:</span> +57 300 679 5246</p>
+    <p><span class="font-semibold text-lime-300">Ubicación:</span> Caldas Antioquia, Colombia</p>
+    <p><span class="font-semibold text-lime-300">Idiomas:</span> Español nativo y Ingles B2</p>
+    <a href="https://www.politecnicojic.edu.co/" ><span class="font-semibold text-lime-300">Universidad:</span><span class="hover:underline hover:text-yellow-100"> Politecnico Colombiano Jaime Isaza Cadavid</span></a>
+    <p class="text-pretty"><span class="font-semibold text-lime-300">Carrera:</span> Técnica profesional en programacion de sistemas de información por ciclos propedéuticos</p><p></p>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-1">Mis Redes</h3>
+      <ul class="flex gap-4 mt-4 flex-wrap">
+        <li class="flex flex-wrap gap-x-1 justify-center items-center">
+        <GitHubIcon class=" size-4 md:size-6" />
+          <a href="https://github.com/CamiloQuintero08" class="text-lime-300 hover:underline">GitHub</a>
+        </li>
+        <li class="flex flex-wrap gap-x-1 justify-center items-center">
+        <LinkedInIcon class="size-4 md:size-6" />    
+          <a href="https://www.linkedin.com/in/milooo58/" class="text-lime-300 hover:underline">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+

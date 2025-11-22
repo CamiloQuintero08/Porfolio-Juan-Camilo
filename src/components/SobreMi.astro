@@ -1,5 +1,92 @@
-<h2>Con experiencia en atencion al cliente y en empresa de tecnologia 
-    soy un amante a la programacion y videojuegos. Me gusta estudiar y adquirir nuevos conocimientos diariamente
-    La diciplina, dedicacion y esfuerzo son de las virtudes que mas me caracterizan. 
-</h2>
+---
+import MySQLIcon from "./icons/MySQL.astro";
+import SpringIcon from "./icons/Spring.astro";
+import ThymeleafIcon from "./icons/Thymeleaf.astro";
+import JavaIcon from "./icons/Java.astro"
+import HtmlIcon from "./icons/Html.astro"
+import CssIcon from "./icons/CSS.astro"
+import PythonIcon from "./icons/Python.astro"
+import IconAstro from "./icons/IconAstro.astro"
+import TailwindIcon from "./icons/Tailwind.astro"
+
+const TAGS = [
+    {
+        class: "size-25 bg-green-700 rounded-full flex items-center justify-center shadow-md shadow-green-500",
+        icon: SpringIcon,
+        url: "https://spring.io/projects/spring-boot",
+    },
+    {
+        class: "size-25 bg-yellow-500 rounded-full flex items-center justify-center shadow-md shadow-yellow-300",
+        icon: JavaIcon,
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    },
+    {
+        class: "size-25 bg-blue-500 rounded-full flex items-center justify-center shadow-md shadow-blue-200",
+        icon: MySQLIcon,
+        url: "https://www.mysql.com/",
+    },
+    {
+        class: "size-25 bg-green-700 rounded-full flex items-center justify-center shadow-md shadow-emerald-300",
+        icon: ThymeleafIcon,
+        url: "https://www.thymeleaf.org/",
+    },
+    {
+        class: "size-25 bg-orange-400 rounded-full flex items-center justify-center shadow-md shadow-orange-300",
+        icon: HtmlIcon,
+        url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    },
+    {
+        class: "size-25 bg-cyan-500 rounded-full flex items-center justify-center shadow-md shadow-blue-400",
+        icon: CssIcon,
+        url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    },
+    {
+        class: "size-25 bg-gradient-to-r from-yellow-500 to-blue-500 rounded-full flex items-center justify-center shadow-md shadow-blue-700",
+        icon: PythonIcon,
+        url: "https://www.python.org/doc/",
+    },
+    {
+        class: "size-25 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-md shadow-pink-200",
+        icon: IconAstro,
+        url: "https://astro.build/",
+    },
+    {
+        class: "size-25 bg-blue-900 rounded-full flex items-center justify-center shadow-md shadow-cyan-400",
+        icon: TailwindIcon,
+        url: "https://tailwindcss.com/docs/installation/using-vite",
+    },
+];
+---
+
+
+<h3 class="mb text-lg text-pretty">
+Soy una persona responsable, analítica y con gran interés por el desarrollo de software.
+Actualmente curso mi formación universitaria en programación, donde he adquirido
+habilidades en lenguajes como <span class="text-blue-400 font-semibold">Python</span>, <span class="text-yellow-400 font-semibold">JavaScript </span>, <span class="text-orange-500 font-semibold">HTML</span> y <span class="text-teal-300 font-semibold">CSS</span>. 
+También cuento con conocimientos en frameworks y herramientas como <span class="text-violet-500 font-semibold">Astro</span>, <span class="text-cyan-300 font-semibold">Tailwind</span>, <span class="text-lime-200 font-semibold">Spring Boot</span> y
+<span class="text-emerald-700 font-semibold">Thymeleaf</span>, además de bases de datos a nivel introductorio. Me caracterizo por mi actitud
+positiva, capacidad de aprendizaje rápido y adaptación a nuevas tecnologías. Disfruto
+trabajar en equipo, resolver problemas y mantener una mentalidad de crecimiento
+constante, con el objetivo de aportar valor y seguir fortaleciendo mis competencias
+técnicas durante mi proceso de prácticas y formación profesional.
+ 
+</h3>
+<p class="flex flex-wrap font-semibold text-lg text-blue-300 shadow text-shadow-blue-900 mb-15">Desarrollador web enfocado en crear experiencias modernas, rápidas y limpias.</p>
+<h3 class="flex flex-wrap justify-center items-center mb-3 text-2xl font-bold text-lime-300 text-shadow-md text-shadow-emerald-900  ">Tengo conocimiento en los siguiente lenguajes y frameworks :)</h3>
+<ul class="flex flex-wrap justify-center items-center gap-x-5 gap-y-7 text-3xl">
+    {TAGS.map(tag => (
+        <li>
+            <a
+                href={tag.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={`flex items-center gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2 transition-transform hover:scale-115 hover:brightness-115`}
+            >
+                <tag.icon class="size-15" />
+            </a>
+        </li>
+    ))}
+</ul>
+
+
 
