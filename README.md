@@ -1,4 +1,4 @@
-Portafolio de Juan Camilo, proyecto creado con los frameworks Astro y Tailwind.
+Hola Bienvenidos al Portafolio de Juan Camilo, proyecto creado con los frameworks Astro y Tailwind.
 
 Este proyecto muestra mi resumen como programador web y mis proyectos realizados, añadiendo un poco de informacion sobre mi,
 y los lenguages de programacion qye uso en mis proyectos y que tengo conocimiento.
