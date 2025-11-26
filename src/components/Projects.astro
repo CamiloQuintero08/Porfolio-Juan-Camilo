@@ -1,58 +1,100 @@
 ---
-import SpringIcon from '../components/icons/Spring.astro';
-import ThymeleafIcon from '../components/icons/Thymeleaf.astro';
-import MySQLIcon from '../components/icons/MySQL.astro';
+import SpringIcon from "../components/icons/Spring.astro";
+import ThymeleafIcon from "../components/icons/Thymeleaf.astro";
+import MySQLIcon from "../components/icons/MySQL.astro";
+import JavaScriptIcon from "../components/icons/Java.astro";
+import HTMLIcon from "../components/icons/Html.astro";
+import CSSIcon from "../components/icons/CSS.astro";
+import AstroIcon from "../components/icons/IconAstro.astro";
+import TailwindIcon from "../components/icons/Tailwind.astro";
 
 const TAGS = {
     SPRING: {
         name: "Spring Boot",
         class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-green-700 transition hover:shadow-xl hover:shadow-green-900",
-        icon: SpringIcon,    
-},
+        icon: SpringIcon,
+    },
     MYSQL: {
         name: "MySql",
         class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-blue-500 transition hover:shadow-xl hover:shadow-blue-900",
         icon: MySQLIcon,
-
-},
+    },
     THYMELEAF: {
         name: "Thymeleaf",
         class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-green-700 transition hover:shadow-xl hover:shadow-emerald-900",
         icon: ThymeleafIcon,
-    }
-};        
-
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-green-700 transition hover:shadow-xl hover:shadow-emerald-900",
+        icon: JavaScriptIcon,
+    },
+    HTML: {
+        name: "HTML",
+        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-green-700 transition hover:shadow-xl hover:shadow-emerald-900",
+        icon: HTMLIcon,
+    },
+    CSS: {
+        name: "CSS",
+        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-green-700 transition hover:shadow-xl hover:shadow-emerald-900",
+        icon: CSSIcon,
+    },
+    ASTRO: {
+        name: "Astro",
+        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-pink-700 transition hover:shadow-xl hover:shadow-pink-900",
+        icon: AstroIcon,
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-blue-700 transition hover:shadow-xl hover:shadow-blue-900",
+        icon: TailwindIcon,
+    },
+};
 
 const PROJECTS = [
     {
         title: "Aura Artesanal",
-        description: "Aura Artesanal es un proyecto enfocado en la exhibición y comercialización de productos artesanales como lámparas, macetas y relojes. Fue creado con el propósito de llegar a más personas, optimizar el tiempo de venta y facilitar la presentación de los productos de manera visual, ordenada y atractiva. Su objetivo es ofrecer una experiencia moderna que conecte el trabajo artesanal con clientes que buscan piezas únicas y elaboradas con dedicación.",
+        description:
+            "Aura Artesanal es un proyecto enfocado en la exhibición y comercialización de productos artesanales como lámparas, macetas y relojes. Fue creado con el propósito de llegar a más personas, optimizar el tiempo de venta y facilitar la presentación de los productos de manera visual, ordenada y atractiva. Su objetivo es ofrecer una experiencia moderna que conecte el trabajo artesanal con clientes que buscan piezas únicas y elaboradas con dedicación.",
         link: " #",
         github: "https://github.com/CamiloQuintero08/LamparasShoop",
         image: "img/Aura_Artesanal.webp",
         tags: [TAGS.SPRING, TAGS.MYSQL, TAGS.THYMELEAF],
-    },  
-];    
+    },
+    {
+        title: "I Found You",
+        description:
+            "I Found You es un proyecto personal de semestre que consiste en la simulacion de una red social, con funcionalidades como la creacion de perfiles, publicaciones, comentarios y me gusta. Fue creado con el propósito de aprender a implementar funcionalidades avanzadas de una red social.",
+        link: " #",
+        github: "https://github.com/CamiloQuintero08/Te-encontre",
+        image: "img/FoundYou.webp",
+        tags: [TAGS.ASTRO, TAGS.MYSQL, TAGS.TAILWIND],
+    },
+];
 ---
 
 {
-    PROJECTS.map(({ image, title, description, tags})=> (
-       <article>
-        <h3 class="text-2xl font-semibold text-lime-300 mb-2">{title}</h3>
-        <p class="text-lg mb-4 text-pretty">{description}</p>
-        <ul class="flex gap-x-5 flex-row mb-6">
-            {tags.map(tag => (
-                <li>
-                    <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}>
-                        <tag.icon class="size-5" />
-                        {tag.name}
-                    </span>
-                </li>
-            ))}
-        </ul>
-        <img class="rounded shadow-xl shadow-emerald-900 transition-transform duration-300 hover:scale-105" 
-        src={image} 
-        alt={`Captura de pantalla del proyecto ${image}`} />
-       </article> 
+    PROJECTS.map(({ image, title, description, tags }) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-lime-300 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-5 flex-row mb-6">
+                {tags.map((tag) => (
+                    <li>
+                        <span
+                            class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}
+                        >
+                            <tag.icon class="size-5" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-xl shadow-emerald-900 transition-transform duration-300 hover:scale-105 mb-8"
+                src={image}
+                alt={`Captura de pantalla del proyecto ${image}`}
+            />
+        </article>
     ))
 }
