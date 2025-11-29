@@ -1,83 +1,104 @@
 ---
-
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GitHubIcon from '../components/icons/GitHub.astro';
-import SocialPill from '../components/SocialPill.astro';
-import MailIcon from '../components/icons/Mail.astro';
-import CodeIcon from '../components/icons/Code.astro';
-import Projects from '../components/Projects.astro';
-import SobreMi from '../components/SobreMi.astro';
-import UserIcon from '../components/icons/User.astro';
-import Contacto from '../components/Contacto.astro';
-import ContactIcon from '../components/icons/Contact.astro'
-
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import SocialPill from "../components/SocialPill.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import SobreMi from "../components/SobreMi.astro";
+import UserIcon from "../components/icons/User.astro";
+import Contacto from "../components/Contacto.astro";
+import ContactIcon from "../components/icons/Contact.astro";
 ---
 
-<Layout title="Porfolio de Juan Camilo - Desarrollador Web"
-description="Portafolio de Juan Camilo, desarrollador web especializado en crear soluciones eficientes y limpias."
+<Layout
+	title="Porfolio de Juan Camilo - Desarrollador Web"
+	description="Portafolio de Juan Camilo, desarrollador web especializado en crear soluciones eficientes y limpias."
 >
-	<main class="px-4">
-		<SectionContainer class="py-44 pb-32">			
-			 <img 
-				class="rounded-full size-20 mb-4" 
-				src="/img/ProfilePhoto.jpg" 
-				alt="juan camilo" /> 
-		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-			Hola! soy <span class="text-lime-300">Juan Camilo</span>
-			<a href="https://www.linkedin.com/in/milooo58/" 
-			target="_blank"
-			 rel="noopener"
-			 class="flex justify-center items-center">
-				<Badge>Disponible para trabajar</Badge></a>
-		</h1>
-		<h2 class="text-xl lg:text-2xl max-w-[700px] text-pretty">
-  		En búsqueda de oportunidades. <span class="text-blue-300 text-shadow-xs text-shadow-black">Desarrollador Web</span> 
-		del sur de Colombia, ubicado en el Valle de Aburrá. Enfocado en crear soluciones prácticas con código claro, eficiente y orientado a resultados.
-		</h2>
+	<main class="px-4 sm:px-6 lg:px-8">
+		<SectionContainer
+			class="py-24 sm:py-32 md:py-44 pb-20 sm:pb-24 md:pb-32"
+		>
+			<img
+				class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-4"
+				src="/img/ProfilePhoto.jpg"
+				alt="juan camilo"
+			/>
+			<h1
+				class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold flex flex-col sm:flex-row gap-x-4 gap-y-3 pb-6 lg:pb-10"
+			>
+				Hola! soy <span class="text-lime-300">Juan Camilo</span>
+				<a
+					href="https://www.linkedin.com/in/milooo58/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge></a
+				>
+			</h1>
+			<h2
+				class="text-base sm:text-lg md:text-xl lg:text-2xl max-w-[700px] text-pretty"
+			>
+				En búsqueda de oportunidades. <span
+					class="text-blue-300 text-shadow-xs text-shadow-black"
+					>Desarrollador Web</span
+				>
+				del sur de Colombia, ubicado en el Valle de Aburrá. Enfocado en crear
+				soluciones prácticas con código claro, eficiente y orientado a resultados.
+			</h2>
 
-
-			<nav class="flex gap-4 mt-8 flex-wrap">
+			<nav class="flex gap-3 sm:gap-4 mt-6 sm:mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/milooo58/">
 					<LinkedInIcon class="size-4 md:size-6" />
-					LinkedIn
+					<span class="hidden sm:inline">LinkedIn</span>
+					<span class="sm:hidden">In</span>
 				</SocialPill>
-				<SocialPill href="https://github.com/CamiloQuintero08"> 
+				<SocialPill href="https://github.com/CamiloQuintero08">
 					<GitHubIcon class="size-4 md:size-6" />
-					GitHub
-				</SocialPill>	
-				<SocialPill href=mailto: Jcrestrepo810@gmail.com>
+					<span class="hidden sm:inline">GitHub</span>
+					<span class="sm:hidden">Git</span>
+				</SocialPill>
+				<SocialPill href="mailto:" Jcrestrepo810@gmail.com>
 					<MailIcon class="size-4 md:size-6" />
-					Jcrestrepo810@gmail.com
-				</SocialPill>			
-			</nav>		
+					<span class="hidden lg:inline">Jcrestrepo810@gmail.com</span
+					>
+					<span class="lg:hidden">Email</span>
+				</SocialPill>
+			</nav>
 		</SectionContainer>
 
 		<SectionContainer id="proyectos">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"> 
-			<CodeIcon class="size-7" />
-			Proyectos
+			<h2
+				class="text-2xl sm:text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+			>
+				<CodeIcon class="size-6 sm:size-7" />
+				Proyectos
 			</h2>
 			<Projects />
-		</SectionContainer>	
+		</SectionContainer>
 
 		<SectionContainer id="sobre-mi">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"> 
-			<UserIcon class="size-7" />
-			Sobre mí
+			<h2
+				class="text-2xl sm:text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+			>
+				<UserIcon class="size-6 sm:size-7" />
+				Sobre mí
 			</h2>
 			<SobreMi />
-		</SectionContainer>	
+		</SectionContainer>
 
 		<SectionContainer id="contacto">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"> 
-			<ContactIcon class="size-7" />
-			Mi Contacto
+			<h2
+				class="text-2xl sm:text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+			>
+				<ContactIcon class="size-6 sm:size-7" />
+				Mi Contacto
 			</h2>
 			<Contacto />
 		</SectionContainer>
-
 	</main>
-</Layout>	
+</Layout>

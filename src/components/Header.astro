@@ -1,22 +1,122 @@
-<header class="bg-black/30 rounded-2xl flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto bg- shadow-xl shadow-emerald-900 ">
+<header
+  class="bg-black/30 rounded-2xl flex justify-center items-center py-3 md:py-5 w-full xl:w-[1120px] mx-auto shadow-xl shadow-emerald-900 sticky top-4 z-50"
+>
+  <button
+    id="menu-toggle"
+    class="md:hidden absolute left-4 flex flex-col gap-1.5 p-2 rounded-lg hover:bg-lime-300/10 transition"
+    aria-label="Toggle menu"
+  >
+    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+  </button>
 
-    <nav class="flex space-x-5 flex-row gap-x-10 text-shadow-xs text-shadow-green-200">
-        <a href="#top" class="flex justify-center items-center px-7 py-2 rounded-full border border-white/5 bg-emerald-950 text-white hover:animate-none hover:bg-lime-300
+  <nav
+    class="hidden md:flex space-x-3 lg:space-x-5 flex-row lg:gap-x-10 text-shadow-xs text-shadow-green-200"
+  >
+    <a
+      href="#top"
+      class="flex justify-center items-center px-4 lg:px-7 py-2 rounded-full border border-white/5 bg-emerald-950 text-white text-sm lg:text-base hover:animate-none hover:bg-lime-300
          hover:text-emerald-950 hover:shadow-lg hover:shadow-lime-300/50
-          hover:translate-x-1 hover:scale-110 transition duration-300 ease-in-out animate-pulse ">Inicio</a>
+          hover:translate-x-1 hover:scale-110 transition duration-300 ease-in-out animate-pulse"
+      >Inicio</a
+    >
 
-        <a href="#proyectos" class="flex justify-center items-center px-7 py-2 rounded-full border border-white/5 bg-emerald-950 text-white hover:animate-none hover:bg-lime-300
+    <a
+      href="#proyectos"
+      class="flex justify-center items-center px-4 lg:px-7 py-2 rounded-full border border-white/5 bg-emerald-950 text-white text-sm lg:text-base hover:animate-none hover:bg-lime-300
           hover:text-emerald-950 hover:shadow-lg hover:shadow-lime-300/50
-          hover:translate-x-1 hover:scale-110 transition duration-300 ease-in-out animate-pulse">Proyectos</a>
+          hover:translate-x-1 hover:scale-110 transition duration-300 ease-in-out animate-pulse"
+      >Proyectos</a
+    >
 
-        <a href="#sobre-mi" class="flex justify-center items-center px-7 py-2 rounded-full border border-white/5 bg-emerald-950 text-white hover:animate-none hover:bg-lime-300
+    <a
+      href="#sobre-mi"
+      class="flex justify-center items-center px-4 lg:px-7 py-2 rounded-full border border-white/5 bg-emerald-950 text-white text-sm lg:text-base hover:animate-none hover:bg-lime-300
          hover:text-emerald-950 hover:shadow-lg hover:shadow-lime-300/50
-          hover:translate-x-1 hover:scale-110 transition duration-300 ease-in-out animate-pulse">Sobre Mi</a>
+          hover:translate-x-1 hover:scale-110 transition duration-300 ease-in-out animate-pulse"
+      >Sobre Mi</a
+    >
 
-
-        <a href="#contacto" class="flex justify-center items-center px-7 py-2 rounded-full border border-white/5 bg-emerald-950 text-white hover:animate-none hover:bg-lime-300
+    <a
+      href="#contacto"
+      class="flex justify-center items-center px-4 lg:px-7 py-2 rounded-full border border-white/5 bg-emerald-950 text-white text-sm lg:text-base hover:animate-none hover:bg-lime-300
          hover:text-emerald-950 hover:shadow-lg hover:shadow-lime-300/50
-          hover:translate-x-1 hover:scale-110 transition duration-300 ease-in-out animate-pulse">Contacto</a>
-    </nav>
+          hover:translate-x-1 hover:scale-110 transition duration-300 ease-in-out animate-pulse"
+      >Contacto</a
+    >
+  </nav>
 
+  <nav
+    id="mobile-menu"
+    class="md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-black/95 rounded-2xl shadow-xl shadow-emerald-900 overflow-hidden max-h-0 transition-all duration-300 opacity-0"
+  >
+    <div class="flex flex-col p-4 gap-3">
+      <a
+        href="#top"
+        class="mobile-link flex justify-center items-center px-6 py-3 rounded-full border border-white/5 bg-emerald-950 text-white hover:bg-lime-300 hover:text-emerald-950 hover:shadow-lg hover:shadow-lime-300/50 transition duration-300"
+        >Inicio</a
+      >
+      <a
+        href="#proyectos"
+        class="mobile-link flex justify-center items-center px-6 py-3 rounded-full border border-white/5 bg-emerald-950 text-white hover:bg-lime-300 hover:text-emerald-950 hover:shadow-lg hover:shadow-lime-300/50 transition duration-300"
+        >Proyectos</a
+      >
+      <a
+        href="#sobre-mi"
+        class="mobile-link flex justify-center items-center px-6 py-3 rounded-full border border-white/5 bg-emerald-950 text-white hover:bg-lime-300 hover:text-emerald-950 hover:shadow-lg hover:shadow-lime-300/50 transition duration-300"
+        >Sobre Mi</a
+      >
+      <a
+        href="#contacto"
+        class="mobile-link flex justify-center items-center px-6 py-3 rounded-full border border-white/5 bg-emerald-950 text-white hover:bg-lime-300 hover:text-emerald-950 hover:shadow-lg hover:shadow-lime-300/50 transition duration-300"
+        >Contacto</a
+      >
+    </div>
+  </nav>
 </header>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+
+  menuToggle?.addEventListener("click", () => {
+    const isOpen = mobileMenu?.classList.contains("max-h-96");
+
+    if (isOpen) {
+      mobileMenu?.classList.remove("max-h-96", "opacity-100");
+      mobileMenu?.classList.add("max-h-0", "opacity-0");
+    } else {
+      mobileMenu?.classList.remove("max-h-0", "opacity-0");
+      mobileMenu?.classList.add("max-h-96", "opacity-100");
+    }
+
+    const spans = menuToggle?.querySelectorAll("span");
+    if (spans) {
+      if (isOpen) {
+        spans[0].style.transform = "rotate(0)";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "rotate(0)";
+      } else {
+        spans[0].style.transform = "rotate(45deg) translateY(8px)";
+        spans[1].style.opacity = "0";
+        spans[2].style.transform = "rotate(-45deg) translateY(-8px)";
+      }
+    }
+  });
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.remove("max-h-96", "opacity-100");
+      mobileMenu?.classList.add("max-h-0", "opacity-0");
+
+      const spans = menuToggle?.querySelectorAll("span");
+      if (spans) {
+        spans[0].style.transform = "rotate(0)";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "rotate(0)";
+      }
+    });
+  });
+</script>
