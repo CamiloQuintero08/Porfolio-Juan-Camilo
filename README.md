@@ -1,8 +1,17 @@
-# Hola Bienvenidos al Portafolio de Juan Camilo, proyecto creado con los frameworks Astro y Tailwind.
+# Portafolio de Juan Camilo Quintero
 
-# Este proyecto muestra mi resumen como programador web y mis proyectos realizados, añadiendo un poco de informacion sobre mi, y los lenguages de programacion que uso junto a diferentes frameworks y librerias que use en mis proyectos y que tengo conocimiento.
+# Lenguajes usados
+- HTML
+- CSS
+- JavaScript
 
-conoce mi portafolio en el siguiente enlace: https://porfolio-juan-camilo.netlify.app/
+# Frameworks implementados
+. Astro
+- TailWind
+
+Este proyecto muestra mi resumen como programador web y mis proyectos realizados, añadiendo un poco de informacion sobre mi, y los lenguages de programacion que uso junto a diferentes frameworks y librerias que use en mis proyectos y que tengo conocimiento.
+
+## conoce mi portafolio en el siguiente enlace: https://porfolio-juan-camilo.netlify.app/
 
 
 ## Inicio 
