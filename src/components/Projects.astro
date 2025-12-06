@@ -26,17 +26,17 @@ const TAGS = {
     },
     JAVASCRIPT: {
         name: "JavaScript",
-        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-green-700 transition hover:shadow-xl hover:shadow-emerald-900",
+        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-yellow-500 transition hover:shadow-xl hover:shadow-yellow-600",
         icon: JavaScriptIcon,
     },
     HTML: {
         name: "HTML",
-        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-green-700 transition hover:shadow-xl hover:shadow-emerald-900",
+        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-orange-600 transition hover:shadow-xl hover:shadow-orange-700",
         icon: HTMLIcon,
     },
     CSS: {
         name: "CSS",
-        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-green-700 transition hover:shadow-xl hover:shadow-emerald-900",
+        class: "rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2  md:py-2 md:px-4 text-xs md:text-base bg-white/5 hover:scale-110 hover:bg-cyan-500 transition hover:shadow-xl hover:shadow-cyan-700",
         icon: CSSIcon,
     },
     ASTRO: {
@@ -59,7 +59,14 @@ const PROJECTS = [
         link: " #",
         github: "https://github.com/CamiloQuintero08/LamparasShoop",
         image: "img/Aura_Artesanal.webp",
-        tags: [TAGS.SPRING, TAGS.MYSQL, TAGS.THYMELEAF],
+        tags: [
+            TAGS.SPRING,
+            TAGS.MYSQL,
+            TAGS.THYMELEAF,
+            TAGS.HTML,
+            TAGS.CSS,
+            TAGS.JAVASCRIPT,
+        ],
     },
     {
         title: "I Found You",
@@ -67,8 +74,15 @@ const PROJECTS = [
             "I Found You es un proyecto personal de semestre que consiste en la simulacion de una red social, con funcionalidades como la creacion de perfiles, publicaciones, comentarios y me gusta. Fue creado con el propósito de aprender a implementar funcionalidades avanzadas de una red social.",
         link: " #",
         github: "https://github.com/CamiloQuintero08/Te-encontre",
-        image: "img/FoundYou.webp",
-        tags: [TAGS.ASTRO, TAGS.MYSQL, TAGS.TAILWIND],
+        image: "img/FoundYouProject.webp",
+        tags: [
+            TAGS.ASTRO,
+            TAGS.MYSQL,
+            TAGS.TAILWIND,
+            TAGS.JAVASCRIPT,
+            TAGS.HTML,
+            TAGS.CSS,
+        ],
     },
 ];
 ---
@@ -93,7 +107,7 @@ const PROJECTS = [
                 ))}
             </ul>
             <img
-                class="rounded shadow-lg sm:shadow-xl shadow-emerald-900 transition-transform duration-300 hover:scale-105 mb-6 sm:mb-8 w-full"
+                class="rounded shadow-lg sm:shadow-xl shadow-amber-50 transition-transform duration-300 hover:scale-105 mb-6 sm:mb-8 w-full"
                 src={image}
                 alt={`Captura de pantalla del proyecto ${image}`}
             />
