@@ -6,12 +6,14 @@
 - JavaScript
 
 # Frameworks implementados
-. Astro
+- Astro
 - TailWind
 
 Este proyecto muestra mi resumen como programador web y mis proyectos realizados, añadiendo un poco de informacion sobre mi, y los lenguages de programacion que uso junto a diferentes frameworks y librerias que use en mis proyectos y que tengo conocimiento.
 
-## conoce mi portafolio en el siguiente enlace: https://porfolio-juan-camilo.netlify.app/
+
+
+## Conoce mi portafolio en el siguiente enlace: https://porfolio-juan-camilo.netlify.app/
 
 
 ## Inicio 
